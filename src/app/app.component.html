@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+
+<!-- Show Hero section only on the home page -->
+<ng-container *ngIf="isHomePage()">
+  <app-hero></app-hero>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>
