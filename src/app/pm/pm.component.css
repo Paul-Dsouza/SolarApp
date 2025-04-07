@@ -40,6 +40,7 @@
     gap: 20px;
     max-width: 1100px;
     margin: 0 auto 40px auto;
+    overflow: visible;
   }
   
   /* Individual Benefit Card */
@@ -58,21 +59,29 @@
     opacity: 0;
     animation: fadeInCard 0.7s ease-out forwards;
   
+      /* Ensure animation plays */
+  transition: all 0.35s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+.benefit-card:hover {
+  /* Alternative zoom method using 3D transform */
+  /* transform: perspective(1000px) translateZ(30px); */
+  transform: translateY(0) scale(1.05); 
+  /* Scale wont work why?
+  becouse fadeInCard transform was overriding this transform */ 
+  background-color: #f0f8ff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+
+  /* Zoom fallback */
+  /* zoom: 1.08; */
+}
   
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .delay-1 { animation-delay: 0.2s; }
-  .delay-2 { animation-delay: 0.4s; }
-  .delay-3 { animation-delay: 0.6s; }
-  .delay-4 { animation-delay: 0.8s; }
-  
-  /* Hover Effects */
-  .benefit-card:hover {
-    transform: scale(1.05); /* Smooth zoom-in */
-    background-color: #f0f8ff; /* soft pastel blue */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  }
   
   .benefit-card h3 {
     color: #007bff;
@@ -130,11 +139,11 @@
   @keyframes fadeInCard {
     from {
       opacity: 0;
-      transform: translateY(12px);
+      /* transform: translateY(12px); */
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      /* transform: translateY(0); */
     }
   }
   
@@ -188,4 +197,9 @@
       font-size: 0.85rem;
     }
   }
-  
+  /* less aggresive scale */
+  @media (max-width: 768px) {
+    .benefit-card:hover {
+      transform: scale(1.04);
+    }
+  }
