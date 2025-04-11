@@ -203,3 +203,47 @@
       transform: scale(1.04);
     }
   }
+
+
+
+
+
+
+  /* ==========More benefits================ */
+
+  .pm-benefits-summary {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    color: #333;
+  }
+
+  .solar-benefits-image {
+    background-image: url('../assets/solar.jpg'); /* ✅ No ../ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 80%;
+    border-radius: 12px;
+    margin: 20px 0;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .pm-benefits-summary p {
+    margin-bottom: 20px;
+  }
+  
+  .pm-benefits-summary ul {
+    padding-left: 20px;
+    list-style: disc;
+    margin-top: 10px;
+  }
+  
