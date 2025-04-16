@@ -1,0 +1,9 @@
+.logo {
+    background-image: url('../assets/solar-logo.png');
+    background-size: contain; /* or 'cover' depending on the desired fit */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px; 
+    width: 120px; /*Adjust width as needed for your logo */
+  }
+  
