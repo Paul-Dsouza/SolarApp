@@ -1,0 +1,202 @@
+/* Hero Section */
+.cm-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('../assets/solar.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .cm-hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .cm-hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    animation: fadeInUp 1.2s ease-in-out;
+  }
+  
+  /* Info Section */
+  .cm-info-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+  }
+  
+  .info-text {
+    flex: 1 1 400px;
+    padding: 20px;
+  }
+  
+  .info-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00695c;
+  }
+  
+  .info-image {
+    flex: 1 1 400px;
+    height: 250px;
+    background: url('../assets/solar-logo.png') center/contain no-repeat;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Benefits Section */
+  .cm-benefits-section {
+    background-color: #f3f8f6;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .cm-benefits-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #00695c;
+  }
+  
+  .cm-benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* border: 4mm ridge red; */
+    /* border: 4mm ridge rgba(50, 220, 58, 0.6); */
+  }
+  
+  .cm-benefit-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 24px;
+    flex: 1 1 220px;
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+
+  }
+  
+  .cm-benefit-card:hover {
+    transform: scale(1.06);
+    background-color: #e0f2f1;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    
+  }
+  
+  .cm-benefit-card h3 {
+    color: #00796b;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+
+/* Call to Action Section */
+.cm-call-to-action {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+  }
+  
+  .cm-call-to-action h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  .cm-call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+  }
+  
+  /* .cta-btn {
+    background-color: #ffffff;
+    color: #00796b;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-btn:hover {
+    background-color: #004d40;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-btn:active {
+    background-color: #004d40;
+    transform: scale(1);
+  } */
+  
+
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .delay-1 { animation-delay: 0.3s; animation: fadeInUp 0.7s ease forwards; }
+  .delay-2 { animation-delay: 0.5s; animation: fadeInUp 0.7s ease forwards; }
+  .delay-3 { animation-delay: 0.7s; animation: fadeInUp 0.7s ease forwards; }
+  .delay-4 { animation-delay: 0.9s; animation: fadeInUp 0.7s ease forwards; }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cm-info-section {
+      flex-direction: column;
+    }
+  
+    .info-image {
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+    .cm-benefit-card {
+      flex: 1 1 100%;
+      max-width: 90%;
+    }
+
+    .cm-call-to-action {
+        padding: 40px 20px;
+      }
+  }
+  
