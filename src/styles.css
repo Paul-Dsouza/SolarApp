@@ -65,6 +65,12 @@ nav ul li a:hover {
 nav ul li ul li a {
   padding: 5px;
 }
+/* Flex container to align Login & Admin buttons at the right */
+.auth-buttons {
+  display: flex;
+  gap: 10px; /* small gap between buttons */
+  /* margin-left: auto;/* push to the right corner */
+}
 
 /* Login Button Style */
 .login-btn {
@@ -77,8 +83,24 @@ nav ul li ul li a {
   transition: background-color 0.3s ease;
 }
 
+
 .login-btn:hover {
   background-color: #e67e22;
+}
+/* Admin Button Style */
+.admin-btn {
+  padding: 10px 20px;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  margin-left: 10px; /* space between Login and Admin */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #1c5984;
 }
 
 /* Sidebar Styles */
